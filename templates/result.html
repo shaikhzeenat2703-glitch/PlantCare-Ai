@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        PlantCare AI - {{ t["result_title"] }}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🌱 PlantCare AI
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/?lang={{ lang }}">
+                {{ t["home"] }}
+            </a>
+
+            <a href="/?lang={{ lang }}#about">
+                {{ t["about"] }}
+            </a>
+
+            <a href="/?lang={{ lang }}#detect">
+                {{ t["detect"] }}
+            </a>
+
+
+            <!-- LANGUAGE SELECTOR -->
+
+            <select
+                onchange="changeLanguage(this.value)"
+                class="language-select"
+            >
+
+                <option value="en"
+                    {% if lang == "en" %}selected{% endif %}>
+                    🇬🇧 English
+                </option>
+
+                <option value="hi"
+                    {% if lang == "hi" %}selected{% endif %}>
+                    🇮🇳 हिंदी
+                </option>
+
+                <option value="mr"
+                    {% if lang == "mr" %}selected{% endif %}>
+                    🇮🇳 मराठी
+                </option>
+
+            </select>
+
+        </div>
+
+    </nav>
+
+
+    <!-- RESULT SECTION -->
+
+    <section class="result-section">
+
+        <div class="result-heading">
+
+            <p class="small-title">
+                🌿 PlantCare AI
+            </p>
+
+            <h2>
+                {{ t["result_title"] }}
+            </h2>
+
+            <p>
+                {{ t["result_description"] }}
+            </p>
+
+        </div>
+
+
+        <!-- RESULT CARD -->
+
+        <div class="result-card-new">
+
+            <div class="result-icon">
+                🌱
+            </div>
+
+
+            <!-- DISEASE -->
+
+            <div class="result-block">
+
+                <h3>
+                    {{ t["predicted_disease"] }}
+                </h3>
+
+                <div class="disease-name">
+                    {{ disease }}
+                </div>
+
+            </div>
+
+
+            <!-- CONFIDENCE -->
+
+            <div class="result-block confidence-block">
+
+                <div class="confidence-heading">
+
+                    <h3>
+                        {{ t["confidence"] }}
+                    </h3>
+
+                    <strong>
+                        {{ confidence }}%
+                    </strong>
+
+                </div>
+
+
+                <div class="confidence-bar">
+
+                    <div
+                        class="confidence-fill"
+                        style="width: {{ confidence }}%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOLUTION -->
+
+            <div class="solution-box-new">
+
+                <div class="solution-title">
+
+                    <span class="solution-icon">
+                        💡
+                    </span>
+
+                    <h3>
+                        {{ t["recommended_solution"] }}
+                    </h3>
+
+                </div>
+
+                <p>
+                    {{ solution }}
+                </p>
+
+            </div>
+
+
+            <!-- PRECAUTION -->
+
+            <div class="precaution-box">
+
+                <strong>
+
+                    🌿
+
+                    {% if lang == "hi" %}
+
+                        ध्यान दें
+
+                    {% elif lang == "mr" %}
+
+                        लक्षात ठेवा
+
+                    {% else %}
+
+                        Important
+
+                    {% endif %}
+
+                </strong>
+
+
+                <p>
+
+                    {% if lang == "hi" %}
+
+                        बीमारी की सही पहचान के लिए पौधे की स्पष्ट और अच्छी
+                        quality वाली पत्ती की फोटो का उपयोग करें।
+
+                    {% elif lang == "mr" %}
+
+                        रोगाची अधिक अचूक ओळख करण्यासाठी झाडाच्या पानाचा
+                        स्पष्ट आणि चांगल्या quality चा फोटो वापरा.
+
+                    {% else %}
+
+                        For better identification, use a clear and good-quality
+                        image of the affected leaf.
+
+                    {% endif %}
+
+                </p>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <a
+                href="/?lang={{ lang }}#detect"
+                class="button result-button-new"
+            >
+
+                🔄 {{ t["check_another"] }}
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            {{ t["footer"] }}
+        </p>
+
+    </footer>
+
+
+    <!-- LANGUAGE SCRIPT -->
+
+    <script>
+
+        function changeLanguage(language) {
+
+            window.location.href =
+                "/?lang=" + language;
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

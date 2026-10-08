@@ -1,0 +1,1530 @@
+/* ============================================
+   PLANTCARE AI - COMPLETE WEBSITE STYLING
+   ============================================ */
+
+
+/* ============================================
+   BASIC RESET
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f6fbf7;
+    color: #183b2a;
+    line-height: 1.6;
+}
+
+
+/* ============================================
+   NAVIGATION BAR
+   ============================================ */
+
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    background: rgba(255, 255, 255, 0.96);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #e4eee7;
+
+    box-shadow: 0 3px 15px rgba(30, 80, 50, 0.06);
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #176b3a;
+    letter-spacing: 0.3px;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #315443;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    color: #249653;
+}
+
+
+/* ============================================
+   LANGUAGE SELECTOR
+   ============================================ */
+
+.language-select {
+    padding: 9px 12px;
+
+    border: 1px solid #b8d8c2;
+    border-radius: 10px;
+
+    background: #f7fcf8;
+    color: #176b3a;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    outline: none;
+
+    margin-left: 4px;
+
+    transition: 0.3s ease;
+}
+
+
+.language-select:hover {
+    border-color: #2e9d57;
+    background: #eef9f1;
+}
+
+
+.language-select:focus {
+    border-color: #2e9d57;
+    box-shadow: 0 0 0 3px rgba(46, 157, 87, 0.12);
+}
+
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    min-height: 620px;
+
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background:
+        radial-gradient(circle at 85% 25%, #dff4e5 0, transparent 28%),
+        linear-gradient(135deg, #f8fcf9 0%, #edf8f0 100%);
+}
+
+
+.hero-text {
+    max-width: 620px;
+}
+
+
+.small-title {
+    display: inline-block;
+
+    color: #23844a;
+    background: #e1f4e6;
+
+    padding: 8px 15px;
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 22px;
+}
+
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.08;
+
+    color: #123d27;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    display: block;
+    color: #2e9d57;
+}
+
+
+.hero-text > p:not(.small-title) {
+    max-width: 560px;
+
+    font-size: 18px;
+    color: #557064;
+
+    margin-bottom: 32px;
+}
+
+
+/* ============================================
+   BUTTON
+   ============================================ */
+
+.button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #2e9d57,
+        #218648
+    );
+
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(46, 157, 87, 0.22);
+
+    transition: all 0.3s ease;
+}
+
+
+.button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(46, 157, 87, 0.30);
+}
+
+
+.button:active {
+    transform: translateY(0);
+}
+
+
+/* ============================================
+   HERO IMAGE / PLANT CIRCLE
+   ============================================ */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 350px;
+}
+
+
+.leaf-circle {
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 125px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff 0%,
+            #e8f7ec 55%,
+            #cfeeda 100%
+        );
+
+    border: 10px solid white;
+
+    box-shadow:
+        0 25px 55px rgba(35, 110, 62, 0.16),
+        inset 0 0 30px rgba(46, 157, 87, 0.08);
+
+    animation: floatPlant 4s ease-in-out infinite;
+}
+
+
+@keyframes floatPlant {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.about {
+    padding: 90px 10%;
+
+    text-align: center;
+
+    background: white;
+}
+
+
+.about h2 {
+    font-size: 36px;
+    color: #176b3a;
+
+    margin-bottom: 20px;
+}
+
+
+.about p {
+    max-width: 850px;
+
+    margin: auto;
+
+    color: #5c7166;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================
+   DETECTION SECTION
+   ============================================ */
+
+.detect {
+    padding: 90px 7%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f5fbf7 0%,
+            #edf8f1 100%
+        );
+}
+
+
+.detect > h2 {
+    font-size: 38px;
+
+    color: #176b3a;
+
+    margin-bottom: 12px;
+}
+
+
+.detect > p {
+    color: #60756a;
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+
+/* ============================================
+   UPLOAD NOTE
+   ============================================ */
+
+.upload-note {
+    font-size: 14px !important;
+
+    color: #708078 !important;
+
+    margin-top: 5px;
+    margin-bottom: 30px !important;
+
+    line-height: 1.6;
+}
+
+
+/* ============================================
+   UPLOAD BOX
+   ============================================ */
+
+.upload-box {
+    width: min(650px, 92%);
+
+    margin: 35px auto 0;
+
+    padding: 45px 40px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e0eee4;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 45px rgba(31, 91, 51, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+
+.upload-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 25px 55px rgba(31, 91, 51, 0.14);
+}
+
+
+/* ============================================
+   UPLOAD ICON
+   ============================================ */
+
+.upload-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5f6e9;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 8px 20px rgba(46, 157, 87, 0.10);
+}
+
+
+.upload-box h3 {
+    color: #164d30;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+
+.upload-box p {
+    color: #6b7d73;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================================
+   FILE INPUT
+   ============================================ */
+
+input[type="file"] {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 2px dashed #b9d9c3;
+
+    border-radius: 12px;
+
+    background: #f8fcf9;
+
+    color: #50675a;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+
+input[type="file"]:hover {
+    border-color: #2e9d57;
+
+    background: #f0faf3;
+}
+
+
+input[type="file"]::file-selector-button {
+    margin-right: 12px;
+
+    padding: 9px 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #dff3e5;
+
+    color: #176b3a;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ============================================
+   RESULT PAGE
+   ============================================ */
+
+.detect .upload-box strong {
+    color: #176b3a;
+
+    font-size: 22px;
+}
+
+
+/* ============================================
+   SOLUTION BOX
+   ============================================ */
+
+.solution-box {
+    margin-top: 28px;
+
+    padding: 25px;
+
+    background: #eef9f1;
+
+    border-left: 5px solid #2e9d57;
+
+    border-radius: 14px;
+
+    text-align: left;
+
+    box-shadow:
+        0 8px 20px rgba(46, 157, 87, 0.06);
+}
+
+
+.solution-box h3 {
+    margin-bottom: 12px;
+
+    color: #176b3a;
+
+    font-size: 22px;
+}
+
+
+.solution-box p {
+    color: #42584b;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+    margin-bottom: 0;
+}
+
+
+/* ============================================
+   RESULT PAGE CONFIDENCE
+   ============================================ */
+
+.detect .upload-box > h3 {
+    margin-top: 18px;
+}
+
+
+.detect .upload-box > p strong {
+    font-size: 21px;
+
+    color: #2e9d57;
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    padding: 25px 7%;
+
+    background: #123d27;
+
+    color: #d9eee0;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+footer p {
+    margin: 0;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+    }
+
+
+    .hero {
+        padding: 65px 6%;
+
+        gap: 30px;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+
+    .hero-image {
+        min-width: 280px;
+    }
+
+
+    .leaf-circle {
+        width: 270px;
+        height: 270px;
+
+        font-size: 100px;
+    }
+
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 5%;
+
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+
+    .logo {
+        font-size: 22px;
+    }
+
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    .language-select {
+        margin-left: 0;
+    }
+
+
+    .hero {
+        min-height: auto;
+
+        padding: 65px 7%;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+
+    .small-title {
+        font-size: 11px;
+    }
+
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+
+    .hero-text > p:not(.small-title) {
+        font-size: 16px;
+    }
+
+
+    .hero-image {
+        min-width: auto;
+
+        margin-top: 15px;
+    }
+
+
+    .leaf-circle {
+        width: 220px;
+        height: 220px;
+
+        font-size: 80px;
+    }
+
+
+    .about {
+        padding: 65px 8%;
+    }
+
+
+    .about h2,
+    .detect > h2 {
+        font-size: 30px;
+    }
+
+
+    .about p,
+    .detect > p {
+        font-size: 15px;
+    }
+
+
+    .detect {
+        padding: 65px 5%;
+    }
+
+
+    .upload-box {
+        width: 100%;
+
+        padding: 32px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .upload-box h3 {
+        font-size: 21px;
+    }
+
+
+    .solution-box {
+        padding: 20px;
+    }
+
+
+    .solution-box h3 {
+        font-size: 20px;
+    }
+
+
+    .solution-box p {
+        font-size: 15px;
+    }
+
+
+    .button {
+        font-size: 15px;
+
+        padding: 12px 20px;
+    }
+
+}
+
+
+/* ============================================
+   SMALL MOBILE
+   ============================================ */
+
+@media (max-width: 420px) {
+
+    .nav-links {
+        gap: 8px;
+    }
+
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+
+    .language-select {
+        font-size: 13px;
+
+        padding: 7px 9px;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .leaf-circle {
+        width: 190px;
+        height: 190px;
+
+        font-size: 68px;
+    }
+
+
+    .upload-box {
+        padding: 28px 15px;
+    }
+
+}
+/* ============================================
+   ATTRACTIVE RESULT PAGE
+   ============================================ */
+
+.result-card {
+    max-width: 700px;
+}
+
+
+.disease-result {
+    margin: 10px auto 25px;
+
+    padding: 15px 20px;
+
+    background: #e9f7ed;
+
+    border: 1px solid #cce8d4;
+
+    border-radius: 12px;
+
+    max-width: 500px;
+}
+
+
+.disease-result strong {
+    color: #176b3a !important;
+
+    font-size: 22px !important;
+}
+
+
+.confidence-result {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+
+    padding: 12px 20px;
+
+    margin: 5px auto 15px;
+
+    background: #f1f8f3;
+
+    border-radius: 30px;
+
+    border: 2px solid #bde0c7;
+}
+
+
+.confidence-result strong {
+    color: #23844a !important;
+
+    font-size: 22px !important;
+}
+
+
+.result-button {
+    margin-top: 25px;
+}
+/* ==========================================
+   PLANTCARE AI CHATBOT
+   ========================================== */
+
+.chatbot-container {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1000;
+}
+
+
+/* Floating chatbot button */
+
+.chatbot-button {
+    width: 62px;
+    height: 62px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #2e8b57;
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.20);
+
+    transition: 0.3s;
+}
+
+
+.chatbot-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* Chatbot window */
+
+.chatbot-box {
+    display: none;
+
+    flex-direction: column;
+
+    position: absolute;
+
+    right: 0;
+    bottom: 75px;
+
+    width: 350px;
+    height: 480px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Header */
+
+.chatbot-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 18px;
+
+    background: #2e8b57;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.chatbot-header button {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* Messages area */
+
+.chatbot-messages {
+    flex: 1;
+
+    padding: 15px;
+
+    overflow-y: auto;
+
+    background: #f6faf7;
+}
+
+
+/* Bot message */
+
+.bot-message {
+    display: block;
+
+    width: fit-content;
+    max-width: 80%;
+
+    padding: 10px 13px;
+
+    margin-bottom: 10px;
+
+    background: white;
+
+    border-radius: 12px 12px 12px 3px;
+
+    color: #333;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    line-height: 1.4;
+}
+
+
+/* User message */
+
+.user-message {
+    display: block;
+
+    width: fit-content;
+    max-width: 80%;
+
+    padding: 10px 13px;
+
+    margin: 0 0 10px auto;
+
+    background: #dff3e5;
+
+    border-radius: 12px 12px 3px 12px;
+
+    color: #174d2c;
+
+    line-height: 1.4;
+}
+
+
+/* Input area */
+
+.chatbot-input {
+    display: flex;
+
+    padding: 10px;
+
+    background: white;
+
+    border-top: 1px solid #e5e5e5;
+}
+
+
+.chatbot-input input {
+    flex: 1;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    padding: 10px 14px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.chatbot-input input:focus {
+    border-color: #2e8b57;
+}
+
+
+.chatbot-input button {
+    width: 42px;
+    height: 42px;
+
+    margin-left: 8px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #2e8b57;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .chatbot-container {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .chatbot-box {
+        width: calc(100vw - 30px);
+        height: 450px;
+        right: 0;
+    }
+
+}
+/* ==========================================
+   IMPROVED RESULT PAGE
+   ========================================== */
+
+.result-section {
+    min-height: 75vh;
+    padding: 70px 20px;
+    background: #f6faf7;
+}
+
+.result-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.result-heading h2 {
+    margin-bottom: 12px;
+}
+
+.result-card-new {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.result-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7f6ec;
+    border-radius: 50%;
+    font-size: 38px;
+}
+
+.result-block {
+    margin-bottom: 28px;
+}
+
+.result-block h3 {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.disease-name {
+    display: inline-block;
+    max-width: 100%;
+    padding: 12px 22px;
+    background: #e8f6ed;
+    color: #216b3b;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.confidence-block {
+    text-align: left;
+}
+
+.confidence-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.confidence-heading h3 {
+    margin: 0;
+}
+
+.confidence-heading strong {
+    font-size: 20px;
+    color: #2e8b57;
+}
+
+.confidence-bar {
+    width: 100%;
+    height: 13px;
+    background: #e7ece8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: #2e8b57;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+.solution-box-new {
+    margin-top: 25px;
+    padding: 22px;
+    background: #f1f9f3;
+    border-left: 5px solid #2e8b57;
+    border-radius: 14px;
+    text-align: left;
+}
+
+.solution-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.solution-title h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.solution-icon {
+    font-size: 22px;
+}
+
+.solution-box-new p {
+    margin: 0;
+    line-height: 1.7;
+    color: #444;
+}
+
+.precaution-box {
+    margin-top: 20px;
+    padding: 18px;
+    background: #fff8e7;
+    border-radius: 14px;
+    text-align: left;
+}
+
+.precaution-box strong {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.precaution-box p {
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.result-button-new {
+    display: inline-block;
+    margin-top: 28px;
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   MOBILE RESULT PAGE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .result-section {
+        padding: 45px 15px;
+    }
+
+    .result-card-new {
+        padding: 25px 18px;
+    }
+
+    .disease-name {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    .confidence-heading strong {
+        font-size: 18px;
+    }
+
+    .solution-box-new,
+    .precaution-box {
+        padding: 16px;
+    }
+
+}
+/* ==========================================
+   IMAGE PREVIEW
+   ========================================== */
+
+.preview-container {
+    display: none;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.preview-container p {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #2e5d3b;
+}
+
+.image-preview {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto;
+    padding: 8px;
+    background: #f5faf6;
+    border: 2px solid #d8eadc;
+    border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+
+    .image-preview {
+        max-width: 250px;
+        height: 190px;
+    }
+
+}
+/* ==========================================
+   CAMERA OPTIONS
+   ========================================== */
+
+.camera-option-button {
+    display: inline-block;
+    padding: 13px 22px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 10px;
+    background: #e1f4e6;
+    color: #176b39;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.camera-option-button:hover {
+    background: #ccebd5;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   SELECTED FILE NAME
+   ========================================== */
+
+.selected-file-name {
+    margin-top: 12px;
+    color: #718278;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   IMAGE PREVIEW
+   ========================================== */
+
+.preview-container {
+    display: none;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.preview-container p {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #2e5d3b;
+}
+
+.image-preview {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto;
+    padding: 8px;
+    background: #f5faf6;
+    border: 2px solid #d8eadc;
+    border-radius: 15px;
+}
+
+
+/* ==========================================
+   CAMERA MODAL
+   ========================================== */
+
+.camera-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   CAMERA BOX
+   ========================================== */
+
+.camera-box {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   CAMERA HEADER
+   ========================================== */
+
+.camera-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.camera-header h3 {
+    margin: 0;
+    color: #185c35;
+}
+
+.close-camera {
+    border: none;
+    background: #f0f0f0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   VIDEO
+   ========================================== */
+
+#cameraVideo {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #111;
+}
+
+
+/* ==========================================
+   CAPTURE BUTTON
+   ========================================== */
+
+.capture-button {
+    margin-top: 18px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #218c4b;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.capture-button:hover {
+    background: #176b39;
+}
+
+
+/* ==========================================
+   CAMERA ERROR
+   ========================================== */
+
+.camera-error {
+    color: #c0392b;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .camera-option-button {
+        width: 90%;
+        margin: 6px auto;
+    }
+
+    .image-preview {
+        max-width: 250px;
+        height: 190px;
+    }
+
+    .camera-box {
+        padding: 15px;
+    }
+
+    #cameraVideo {
+        max-height: 380px;
+    }
+
+}

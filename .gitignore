@@ -1,0 +1,9 @@
+﻿venv/
+__pycache__/
+dataset/
+*.pyc
+model/best_efficientnet.keras
+model/plant_disease_model.keras
+model/plant_disease_model_finetuned.keras
+check_accuracy.py
+train_model.py
