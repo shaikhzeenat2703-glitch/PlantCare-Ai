@@ -469,8 +469,50 @@
     <!-- =========================
          JAVASCRIPT
     ========================== -->
+<script>
+document.getElementById("uploadForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
 
-    <script>
+    const form = this;
+    const imageInput = document.getElementById("imageInput");
+    const detectButton = document.getElementById("detectButton");
+
+    if (!imageInput.files || imageInput.files.length === 0) {
+        alert("Please select or capture a plant image first.");
+        return;
+    }
+
+    detectButton.disabled = true;
+    detectButton.innerHTML = "🔄 Detecting...";
+
+    try {
+        const formData = new FormData(form);
+
+        const response = await fetch("/predict?lang={{ lang }}", {
+            method: "POST",
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error("Server error: " + response.status);
+        }
+
+        const result = await response.text();
+        document.open();
+        document.write(result);
+        document.close();
+
+    } catch (error) {
+        console.error(error);
+        alert("Detection failed. Please try again.");
+        detectButton.disabled = false;
+        detectButton.innerHTML = "🔍 {{ t['detect_button'] }}";
+    }
+});
+</script>
+    
+</body>
+</html>
 
 
         // ==========================================
